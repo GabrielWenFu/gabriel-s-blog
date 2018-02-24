@@ -1,0 +1,66 @@
+.gabriel-menu
+  width: 100%
+  position: absolute
+  font-size: 0.18rem
+  left: -100%
+  top: 0
+  bottom: 0
+  right: 0
+  transition: left 0.5s
+  .gabriel-menu-close
+    width: 0.26rem
+    height: 0.26rem
+    position: absolute
+    left: 1.8rem
+    top: 0.1rem
+    z-index: 99
+    &:after,&:before
+      content: ''
+      display: inline-block
+      width: 100%
+      height: 0.04rem
+      background-color: #202020
+      position: absolute
+      left: 0
+      top: 0.11rem
+    &:after
+      transform: rotate(137deg)
+    &:before
+      transform: rotate(45deg)
+  .gabriel-menu-Mask
+    background-color: rgba(227,239,209,0.6)
+    opacity: 0.6
+    height: 100%
+  ul
+    position: absolute
+    top: 0
+    left: 0
+    width: 2rem
+    background-color: #d1e3db
+    min-height: 80%
+    padding: 0.2rem 0.15rem
+    li
+      padding: 0.1rem
+      color: #e47542
+      font-weight: 600
+      span
+        display: block
+        width: max-content
+        &:after
+          content: ''
+          display: block
+          height: 0.04rem
+          background-color: #a9987c
+          width: 0
+          margin-top: 0.04rem
+        &:hover:after
+          animation: hoverAfter 0.3s
+.gabriel-menu-animate
+  left: 0
+@keyframes hoverAfter
+  0% 
+    width: 0
+    opacity: 0
+  100%
+    width: 100%
+    opacity: 1
