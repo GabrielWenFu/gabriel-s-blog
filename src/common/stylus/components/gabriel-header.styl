@@ -19,11 +19,24 @@
   .gabriel-header-title
     font-size: 0.2rem
     font-weight: 600
-    padding: 0.2rem 0.9rem
+    width: calc(100% - 1.8rem)
     color: #eb652d
+    padding: 0.2rem
   .gabriel-header-logo
     padding: 0.06rem
+    animation: Logo 0.8s ease infinite alternate
     img
       width: 0.48rem
       height: 0.48rem
       border-radius: 50%
+@keyframes Logo
+  0%
+    transform: scale(0.6)
+  25%
+    transform: scale(0.8)
+  50% 
+    transform: scale(1.2)
+  75%
+    transform: scale(1.1)
+  100%
+    transform: scale(1)

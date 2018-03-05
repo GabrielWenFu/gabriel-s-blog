@@ -4,6 +4,8 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import { device } from 'common/js/util.js'
+import fastclick from 'fastclick'
+import store from 'store'
 
 Vue.config.productionTip = false
 
@@ -16,10 +18,14 @@ if (!device.isPC()) {
   document.body.style.margin = '0 auto'
   document.documentElement.style.fontSize = clientWidth / 3.75 + 'px'
 }
+
+fastclick.attach(document.body)
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
+  store
 })

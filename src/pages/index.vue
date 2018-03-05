@@ -1,7 +1,7 @@
 <template>
   <div class="gabriel-content">
-    <GabrielMenu :menuData='menuData' ref='GabrielMenu'>qqqqqqqq</GabrielMenu>
-    <GabrielHeader @showMenu='showmenu'></GabrielHeader>
+    <GabrielMenu ref='GabrielMenu'></GabrielMenu>
+    <GabrielHeader @showMenu='showmenu' title='Gabriel'></GabrielHeader>
   </div>
 </template>
 <script type='text/ecmascript-6'>
@@ -16,13 +16,7 @@ export default {
     return {
       node: 20,
       imgurl: null,
-      base: null,
-      menuData: [{
-        name: '知识库'
-      }, {
-        name: '娱乐'
-      }, {name: '个人爱好'
-      }]
+      base: null
     }
   },
   methods: {
